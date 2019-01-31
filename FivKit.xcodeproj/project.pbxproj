@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		918E81CC22028C9A008975C8 /* FivKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 918E81CA22028C9A008975C8 /* FivKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		918E81D622028E8C008975C8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E81D522028E8C008975C8 /* Date.swift */; };
+		918E81D822028ED8008975C8 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E81D722028ED8008975C8 /* CGRect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		918E81C722028C9A008975C8 /* FivKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FivKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		918E81CA22028C9A008975C8 /* FivKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FivKit.h; sourceTree = "<group>"; };
 		918E81CB22028C9A008975C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		918E81D522028E8C008975C8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		918E81D722028ED8008975C8 /* CGRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +50,28 @@
 		918E81C922028C9A008975C8 /* FivKit */ = {
 			isa = PBXGroup;
 			children = (
+				918E81D422028E1F008975C8 /* Convert */,
+				918E81D322028E03008975C8 /* UI */,
 				918E81CA22028C9A008975C8 /* FivKit.h */,
 				918E81CB22028C9A008975C8 /* Info.plist */,
 			);
 			path = FivKit;
+			sourceTree = "<group>";
+		};
+		918E81D322028E03008975C8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				918E81D722028ED8008975C8 /* CGRect.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		918E81D422028E1F008975C8 /* Convert */ = {
+			isa = PBXGroup;
+			children = (
+				918E81D522028E8C008975C8 /* Date.swift */,
+			);
+			path = Convert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +117,7 @@
 				TargetAttributes = {
 					918E81C622028C9A008975C8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918E81D622028E8C008975C8 /* Date.swift in Sources */,
+				918E81D822028ED8008975C8 /* CGRect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +286,7 @@
 		918E81D022028C9A008975C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -277,6 +303,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.5v.FivKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,6 +312,7 @@
 		918E81D122028C9A008975C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
